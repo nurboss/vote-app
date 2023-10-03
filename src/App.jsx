@@ -41,7 +41,7 @@ const App = () => {
       );
       console.log(response.data);
       if (response.data.message === "Vote was updated successfully!") {
-        toast.success("Successfully toasted!");
+        toast.success("ভোট প্রদান সম্পন্ন হয়েছে!");
 
         // Update local storage with disable set to true
         localStorage.setItem("disable", JSON.stringify(true));
@@ -50,7 +50,7 @@ const App = () => {
         // fetchData();
       }
     } catch (error) {
-      toast.error("This didn't work.");
+      toast.error("আপনার ভোট গ্রহণ করা হয়নি!");
       console.error("Error patch data:", error);
     }
   };
